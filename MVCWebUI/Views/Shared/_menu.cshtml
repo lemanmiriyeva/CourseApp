@@ -1,0 +1,8 @@
+﻿@model IEnumerable<MVCWebUI.Models.Entity.Movie>
+
+<div class="list-group">
+    @foreach (var category in Model)
+    {
+        <a href="#" class="list-group-item list-group-item-action ">@category.Name</a>
+    }
+</div>

@@ -1,0 +1,11 @@
+﻿@model IEnumerable<MVCWebUI.Models.Entity.Movie>
+
+<div class="row">
+    <div class="col-md-3">
+       
+        @await Component.InvokeAsync("CategoryMenu")
+    </div>
+    <div class="col-md-9">
+        @await Html.PartialAsync("_movies",Model)
+    </div>
+</div>

@@ -1,0 +1,31 @@
+﻿@model MVCWebUI.Models.Entity.Movie
+
+<div class="row">
+    <div class="col-md-3">
+        @await Component.InvokeAsync("CategoryMenu")
+    </div>
+<div class="col-md-9">
+    <div class="card mb-3">
+        <div class="card-body">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img class="card-img" src="~/img/@Model.ImageUrl" alt="@Model.Description" />
+                </div >
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <a asp-action="Details" asp-controller="Home" asp-route-id="@Model.Id">@Model.Name</a>
+                        </h5>
+                        <p class="card-text">
+                            @Model.Description
+                        </p>
+                        <p class="card-text">
+                            <small class="text-muted">3 days ago</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

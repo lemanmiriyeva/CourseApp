@@ -1,0 +1,23 @@
+﻿<!Doctype html>
+<html lang="en">
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        @await Html.PartialAsync("_navbar")
+    </header>
+<main>
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+</main>
+<footer>
+    @await Html.PartialAsync("_footer")
+</footer>
+
+</body>
+</html>
